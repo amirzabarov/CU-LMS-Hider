@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "Блокировщик курсов",
+    "version": "1.1",
+    "description": "Скрывает выбранные курсы на платформе",
+    "permissions": [
+        "storage"
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_title": "Настройки скрытых курсов"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://my.centraluniversity.ru/learn/*"],
+            "js": ["content.js"]
+        }
+    ]
+}
